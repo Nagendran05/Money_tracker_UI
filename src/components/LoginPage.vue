@@ -6,7 +6,7 @@
 
       <form @submit.prevent="login" class="space-y-4">
 
-        <!-- Phone -->
+   
         <div>
           <input
             type="text"
@@ -17,7 +17,7 @@
           />
         </div>
 
-        <!-- Password -->
+         
         <div>
           <input
             type="password"
@@ -28,16 +28,16 @@
           />
         </div>
 
-        <!-- Button -->
+     
         <button
           type="submit"
           :disabled="loading"
-          class="w-full py-2 font-semibold text-white transition duration-300 bg-linear-to-r from-indigo-500 to-purple-600"
+          class="w-full py-2 font-semibold text-white transition duration-300 bg-indigo-500"
         >
           {{ loading ? 'Logging in...' : 'Login' }}
         </button>
 
-        <!-- Error -->
+   
         <p v-if="error" class="mt-2 text-sm text-red-500">
           {{ error }}
         </p>

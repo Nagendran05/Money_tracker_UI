@@ -1,29 +1,28 @@
 <template>
   <div class="flex justify-center min-h-screen px-4 py-10 bg-gray-100">
 
-    <div class="w-full max-w-md p-6 bg-white shadow-xl rounded-2xl">
+    <div class="w-full max-w-md p-6 bg-gray-100">
 
-      <!-- Header -->
+
       <h1 class="mb-6 text-3xl font-bold text-center">
         💰 Expense Tracker
       </h1>
 
-      <!-- Balance -->
+  
       <div class="p-5 mb-6 text-center text-white bg-indigo-500 shadow-md rounded-xl">
         <h3 class="text-sm tracking-wide uppercase">Current Balance</h3>
         <h2 class="mt-2 text-2xl font-bold">₹ {{ balance }}</h2>
       </div>
 
-      <!-- Income & Expense -->
       <div class="flex justify-between gap-4 mb-6">
-        <div class="w-1/2 p-4 text-center shadow bg-gray-50 rounded-xl">
+        <div class="w-1/2 p-4 text-center">
           <h4 class="text-sm text-gray-500">Income</h4>
           <p class="mt-1 text-lg font-bold text-green-600">
             ₹ {{ income }}
           </p>
         </div>
 
-        <div class="w-1/2 p-4 text-center shadow bg-gray-50 rounded-xl">
+        <div class="w-1/2 p-4 text-center ">
           <h4 class="text-sm text-gray-500">Expense</h4>
           <p class="mt-1 text-lg font-bold text-red-600">
             ₹ {{ expense }}
@@ -31,8 +30,8 @@
         </div>
       </div>
 
-      <!-- Add Transaction -->
-      <div class="p-5 mb-6 shadow bg-gray-50 rounded-xl">
+      
+      <div class="p-5 mb-6">
         <h3 class="mb-4 font-semibold">Add Transaction</h3>
 
         <input
@@ -65,7 +64,7 @@
         </button>
       </div>
 
-      <!-- History -->
+  
       <div>
         <h3 class="mb-3 font-semibold">History</h3>
 
@@ -73,7 +72,7 @@
           <li
             v-for="(item, index) in transactions"
             :key="index"
-            class="flex items-center justify-between p-3 border-r-4 rounded-lg bg-gray-50"
+            class="flex items-center justify-between p-3 border-r-4 rounded-lg"
             :class="item.type === 'income' ? 'border-green-500' : 'border-red-500'"
           >
             <span class="font-medium">
