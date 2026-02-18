@@ -1,10 +1,10 @@
 <template>
-  <div class="flex justify-center min-h-screen px-4 py-10 bg-gray-100">
+  <div class="flex justify-center min-h-screen px-4 py-10 bg-linear-to-br from-indigo-900 via-blue-700 to-cyan-400">
 
-    <div class="w-full max-w-md p-6 bg-gray-100">
+    <div class="w-full max-w-md p-6 bg-linear-to-br from-indigo-900 via-blue-700 to-cyan-400">
 
 
-      <h1 class="mb-6 text-3xl font-bold text-center">
+      <h1 class="mb-6 text-3xl font-bold text-center text-white">
         💰 Expense Tracker
       </h1>
 
@@ -15,14 +15,14 @@
 
       <div class="flex justify-between gap-4 mb-6">
         <div class="w-1/2 p-4 text-center">
-          <h4 class="text-sm text-gray-500">Income</h4>
+          <h4 class="text-sm text-white">Income</h4>
           <p class="mt-1 text-lg font-bold text-green-600">
             ₹ {{ income }}
           </p>
         </div>
 
         <div class="w-1/2 p-4 text-center ">
-          <h4 class="text-sm text-gray-500">Expense</h4>
+          <h4 class="text-sm text-white">Expense</h4>
           <p class="mt-1 text-lg font-bold text-red-600">
             ₹ {{ expense }}
           </p>
