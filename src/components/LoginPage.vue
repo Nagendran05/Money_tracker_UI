@@ -8,7 +8,7 @@
       <form @submit.prevent="login" class="space-y-4">
 
         <div>
-          <input type="text" v-model="phone" placeholder="Enter Phone Number" required
+          <input type="text" v-model="email" placeholder="Enter Email" required
             class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
@@ -40,7 +40,7 @@ export default {
 
   data() {
     return {
-      phone: "",
+      email: "",
       password: "",
       loading: false,
       error: ""
@@ -54,7 +54,7 @@ export default {
 
       try {
         const res = await axios.post("http://127.0.0.1:8000/api/login", {
-          phone: this.phone,
+          email: this.email,
           password: this.password
         });
 
@@ -62,7 +62,7 @@ export default {
         this.$router.push("/dashboard");
 
       } catch (err) {
-        this.error = "Invalid Phone Number or Password";
+        this.error = "Invalid Email Number or Password";
       } finally {
         this.loading = false;
       }
