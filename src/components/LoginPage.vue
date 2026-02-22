@@ -17,6 +17,13 @@
             class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
+        <p class="mt-2 text-center text-white">
+          Don't have an account?
+        <router-link to="/register" class="font-semibold text-indigo-800 hover:underline">
+          Register
+        </router-link>
+      </p>
+
         <button type="submit" :disabled="loading"
           class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl">
           {{ loading ? 'Logging in...' : 'Login' }}
