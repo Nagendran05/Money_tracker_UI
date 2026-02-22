@@ -1,11 +1,11 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
+  <div class="flex items-center justify-center min-h-screen bg-linear-to-br from-indigo-900 via-blue-700 to-cyan-400">
 
-    <div class="w-full max-w-md p-8 bg-white shadow-2xl rounded-3xl">
+    <div class="w-full max-w-md p-8">
 
       <!-- Title -->
-      <h2 class="mb-6 text-3xl font-bold text-center text-gray-800">
-        📝 Create Account
+      <h2 class="mb-6 text-3xl font-bold text-center text-white">
+         Create Account
       </h2>
 
       <!-- Form -->
@@ -13,52 +13,48 @@
 
         <!-- Name -->
         <div class="mb-4">
-          <label class="block mb-1 text-gray-600">Full Name</label>
           <input
             v-model="form.name"
             type="text"
             placeholder="Enter your name"
-            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
 
         <!-- Email -->
         <div class="mb-4">
-          <label class="block mb-1 text-gray-600">Email</label>
           <input
             v-model="form.email"
             type="email"
             placeholder="Enter your email"
-            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
 
         <!-- Password -->
         <div class="mb-4">
-          <label class="block mb-1 text-gray-600">Password</label>
           <input
             v-model="form.password"
             type="password"
             placeholder="Enter your password"
-            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
 
         <!-- Confirm Password (Optional) -->
         <div class="mb-6">
-          <label class="block mb-1 text-gray-600">Confirm Password (Optional)</label>
           <input
             v-model="form.password_confirmation"
             type="password"
             placeholder="Confirm password"
-            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
 
         <!-- Button -->
         <button
           type="submit"
-          class="w-full py-2 text-white transition duration-300 bg-indigo-500 hover:bg-indigo-600 rounded-xl"
+          class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl"
         >
           Register
         </button>
@@ -66,9 +62,9 @@
       </form>
 
       <!-- Login Link -->
-      <p class="mt-6 text-center text-gray-500">
+      <p class="mt-6 text-center text-white">
         Already have an account?
-        <router-link to="/login" class="font-semibold text-indigo-500 hover:underline">
+        <router-link to="/" class="font-semibold text-indigo-800 hover:underline">
           Login
         </router-link>
       </p>
