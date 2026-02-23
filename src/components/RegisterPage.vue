@@ -26,7 +26,7 @@
           <input
             v-model="form.email"
             type="email"
-            placeholder="Enter your email"
+            placeholder="Enter your Phone"
             class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
