@@ -2,11 +2,7 @@
   <div class="flex justify-center min-h-screen px-4 py-10 bg-linear-to-br from-indigo-900 via-blue-700 to-cyan-400">
 
     <div class="w-full max-w-md p-6 bg-linear-to-br from-indigo-900 via-blue-700 to-cyan-400">
-
-
-      <h1 class="mb-6 text-3xl font-bold text-center text-white">
-        💰 Expense Tracker
-      </h1>
+      <h1 class="mb-6 text-3xl font-bold text-center text-white">Expense Tracker</h1>
 
       <div class="p-5 mb-6 text-center text-white bg-indigo-500 shadow-md rounded-xl">
         <h3 class="text-sm tracking-wide uppercase">Current Balance</h3>
@@ -16,16 +12,12 @@
       <div class="flex justify-between gap-4 mb-6">
         <div class="w-1/2 p-4 text-center">
           <h4 class="text-sm text-white">Income</h4>
-          <p class="mt-1 text-lg font-bold text-green-600">
-            ₹ {{ income }}
-          </p>
+          <p class="mt-1 text-lg font-bold text-green-600">₹ {{ income }}</p>
         </div>
 
         <div class="w-1/2 p-4 text-center ">
           <h4 class="text-sm text-white">Expense</h4>
-          <p class="mt-1 text-lg font-bold text-red-600">
-            ₹ {{ expense }}
-          </p>
+          <p class="mt-1 text-lg font-bold text-red-600">₹ {{ expense }}</p>
         </div>
       </div>
 
@@ -43,32 +35,22 @@
           <option value="expense">Expense</option>
         </select>
 
-        <button @click="addTransaction" class="w-full py-2 font-semibold text-white transition bg-indigo-500 rounded-lg hover:bg-indigo-600">
-          Add
-        </button>
+        <button @click="addTransaction" class="w-full py-2 font-semibold text-white transition bg-indigo-500 rounded-lg hover:bg-indigo-600">Add Transaction</button>
       </div>
 
       <div>
         <h3 class="mb-3 font-semibold">History</h3>
 
         <ul class="space-y-3">
-          <li v-for="(item, index) in transactions" :key="index" class="flex items-center justify-between p-3 border-r-4 rounded-lg"
-            :class="item.type === 'income' ? 'border-green-500' : 'border-red-500'">
-            <span class="font-medium">
-              {{ item.title }}
-            </span>
+          <li v-for="(item, index) in transactions" :key="index" class="flex items-center justify-between p-3 border-r-4 rounded-lg" :class="item.type === 'income' ? 'border-green-500' : 'border-red-500'">
+            <span class="font-medium">{{ item.title }}</span>
 
             <div class="flex items-center gap-3">
-              <span
-                :class="item.type === 'income' ? 'text-green-600' : 'text-red-600'"
-                class="font-bold">
+              <span :class="item.type === 'income' ? 'text-green-600' : 'text-red-600'" class="font-bold">
                 {{ item.type === 'income' ? '+' : '-' }}₹{{ item.amount }}
               </span>
 
-              <button @click="remove(index)"
-                class="text-gray-400 transition hover:text-red-500">
-                ❌
-              </button>
+              <button @click="remove(index)" class="text-gray-400 transition hover:text-red-500">❌</button>
             </div>
           </li>
         </ul>
