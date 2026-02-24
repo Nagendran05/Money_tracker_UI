@@ -3,74 +3,39 @@
 
     <div class="w-full max-w-md p-8">
 
-      <!-- Title -->
       <h2 class="mb-6 text-3xl font-bold text-center text-white">
          Create Account
       </h2>
 
-      <!-- Form -->
       <form @submit.prevent="register">
-
-        <!-- Name -->
         <div class="mb-4">
-          <input
-            v-model="form.name"
-            type="text"
-            placeholder="Enter your name"
-            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          />
+          <input v-model="form.name" type="text" placeholder="Enter your Name" class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
-        <!-- Email -->
         <div class="mb-4">
-          <input
-            v-model="form.email"
-            type="email"
-            placeholder="Enter your Phone"
-            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          />
+          <input v-model="form.email" type="email" placeholder="Enter your Email" class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
-        <!-- Password -->
         <div class="mb-4">
-          <input
-            v-model="form.password"
-            type="password"
-            placeholder="Enter your password"
-            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          />
+          <input v-model="form.password" type="password" placeholder="Enter your Password" class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
-        <!-- Confirm Password (Optional) -->
         <div class="mb-6">
-          <input
-            v-model="form.password_confirmation"
-            type="password"
-            placeholder="Confirm password"
-            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          />
+          <input v-model="form.password_confirmation" type="password" placeholder="Confirm your Password" class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
-        <!-- Button -->
-        <button
-          type="submit"
-          class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl"
-        >
+        <button type="submit" class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl">
           Register
         </button>
-
       </form>
 
-      <!-- Login Link -->
       <p class="mt-6 text-center text-white">
         Already have an account?
         <router-link to="/" class="font-semibold text-indigo-800 hover:underline">
           Login
         </router-link>
       </p>
-
     </div>
-
   </div>
 </template>
 

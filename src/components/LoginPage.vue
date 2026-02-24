@@ -8,13 +8,11 @@
       <form @submit.prevent="login" class="space-y-4">
 
         <div>
-          <input type="text" v-model="email" placeholder="Enter Email" required
-            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
+          <input type="text" v-model="email" placeholder="Enter Email" required class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
         <div>
-          <input type="password" v-model="password" placeholder="Enter Password" required
-            class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
+          <input type="password" v-model="password" placeholder="Enter Password" required class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
         <p class="mt-2 text-center text-white">
@@ -22,20 +20,17 @@
         <router-link to="/register" class="font-semibold text-indigo-800 hover:underline">
           Register
         </router-link>
-      </p>
+        </p>
 
-        <button type="submit" :disabled="loading"
-          class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl">
+        <button type="submit" :disabled="loading" class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl">
           {{ loading ? 'Logging in...' : 'Login' }}
         </button>
 
         <p v-if="error" class="mt-2 text-sm text-red-500">
           {{ error }}
         </p>
-
       </form>
     </div>
-
   </div>
 </template>
 
