@@ -20,10 +20,6 @@
           <input v-model="form.password" type="password" placeholder="Enter your Password" class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         </div>
 
-        <div class="mb-6">
-          <input v-model="form.password_confirmation" type="password" placeholder="Confirm your Password" class="w-full px-4 py-2 text-white border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
-        </div>
-
         <button type="submit" class="w-full py-2 font-semibold text-white transition duration-300 bg-blue-700 rounded-xl">
           Register
         </button>
@@ -40,6 +36,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "Register",
   data() {
@@ -48,21 +45,23 @@ export default {
         name: "",
         email: "",
         password: "",
-        password_confirmation: ""
       }
     };
   },
   methods: {
-    register() {
-      console.log("Register Data:", this.form);
-
-      // optional validation
-      if (!this.form.email || !this.form.password) {
-        alert("Email & Password required!");
-        return;
-      }
-
-
+      register() {
+      axios.post('http://127.0.0.1:8000/api/register', {
+        name: this.form.name,
+        email: this.form.email,
+        password: this.form.password
+      })
+      .then(response => {
+        alert(response.data.message)
+        this.$router.push('/dashboard')
+      })
+      .catch(error => {
+        console.log(error.response.data)
+      })
     }
   }
 };
